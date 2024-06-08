@@ -25,17 +25,16 @@ provider "aws" {
 
 # Use the EC2 instances module
 module "my_instances" {
-  source = "./ec2_instance"
+  source = "../../modules/ec2"
   instance_count = var.instance_count
   ami_id         = var.ami_id
   instance_type  = var.instance_type
   key_name       = var.key_name
   subnet_id = module.vpc.public_subnet_2a
-  Terraform_sg = module.Terraform_sg.Terraform_sg
 }
 
 module "vpc" {
-  source              = "./vpc"
+  source              = "../../modules/vpc"
   private_subnet_cidr = var.private_subnet_cidr
   public_subnet_cidr_1a  = var.public_subnet_cidr_1a
   public_subnet_cidr_2a = var.public_subnet_cidr_2a
