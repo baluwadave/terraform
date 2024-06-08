@@ -22,3 +22,5 @@ variable "subnet_id" {
   type = string
   description = "This is subnet created while created vpc"
 }
+
+
