@@ -11,7 +11,7 @@ variable "ami_id" {
 
 variable "instance_type" {
   description = "The type of EC2 instance to create"
-  default     = "t3.micro"
+  default     = "t2.micro"
 }
 
 
